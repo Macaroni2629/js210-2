@@ -32,11 +32,9 @@ console.log(name, saveName);
 
 // This:
 
-// Copy Code
 // console.log('Bob'.toUpperCase()); // BOB
 // is equivalent to this:
 
-// Copy Code
 // console.log(new String('Bob').toUpperCase()); // BOB
 // With the call to toUpperCase(), the primitive string 'Bob' is passed to the String object wrapper, which then passes it internally to toUpperCase().
 
