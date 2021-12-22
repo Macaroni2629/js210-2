@@ -1,59 +1,12 @@
-// Convert a String to a Signed Number
-// The previous exercise mimics the parseInt function to a lesser extent. In this exercise, you're going to extend that function to work with signed numbers.
+// Convert a Number to a String
+// In the previous two exercises, you developed functions that convert simple numeric strings to signed integers. In this exercise and the next, you're going to reverse those functions.
 
-// Write a function that takes a string of digits and returns the appropriate number as an integer. The string may have a leading + or - sign; if the first character is a +, your function should return a positive number; if it is a -, your function should return a negative number. If there is no sign, return a positive number.
+// You will learn more about converting strings to numbers by writing a function that takes a positive integer or zero, and converts it to a string representation.
 
-// You may assume the string will always contain a valid number.
+// You may not use any of the standard conversion functions available in JavaScript, such as String(), Number.prototype.toString, or an expression such as '' + number. Your function should do this the old-fashioned way and construct the string by analyzing and manipulating the number.
 
-/*
+// Examples:
 
-figure out if it's positive or not
-  if positive, remove the positive sign
-    in variable called posOrNeg = `pos`;
-  if negative, remove the negative sign
-    in variable called posOrNeg = 'neg';
-    
-    
-  
-
-
-*/
-
-const DIGITS = {
-  '0': 0, '1': 1, '2': 2, '3': 3, '4': 4,
-  '5': 5, '6': 6, '7': 7, '8': 8, '9': 9,
-};
-
-function stringToInteger(string) {
-  let value = 0;
-  const numbers = stringToNumbers(string);
-
-  for (let i = 0; i < numbers.length; i += 1) {
-    value = 10 * value + numbers[i];
-  }
-
-  return value;
-}
-
-function stringToNumbers(string) {
-  const result = [];
-
-  for (let i = 0; i < string.length; i += 1) {
-    result.push(DIGITS[string[i]]);
-  }
-
-  return result;
-}
-
-function stringToSignedInteger(string) {
-  switch(string[0]) {
-    case '-': return -stringToInteger(string.slice(1));
-    case'+': return stringToInteger(string.slice(1));
-    default: return stringToInteger(string);
-      
-  }
-}
-
-stringToSignedInteger('4321');      // 4321
-stringToSignedInteger('-570');      // -570
-stringToSignedInteger('+100');      // 100
+console.log(integerToString(4321));      // "4321"
+console.log(integerToString(0));         // "0"
+console.log(integerToString(5000));      // "5000"
