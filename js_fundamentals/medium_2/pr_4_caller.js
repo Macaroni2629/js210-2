@@ -35,3 +35,7 @@ const doubler = makeDoubler('Victor');
 doubler(5);                             // returns 10
 // logs:
 // This function was called by Victor.
+
+// This solution leverages that functions in JavaScript are first-class objects. It satisfies the requirement that makeDoubler must take a caller name and it returns a variation of the doubler function.
+
+//Notice that the returned anonymous function expression assigned to the doubler variable still retains access to the caller variable in its closure, even after the makeDoubler function returns.
