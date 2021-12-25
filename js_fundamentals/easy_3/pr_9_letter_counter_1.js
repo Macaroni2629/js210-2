@@ -1,7 +1,5 @@
-// Letter Counter Part 1
-// Write a function that takes a string consisting of one or more space separated words and returns an object that shows the number of words of different sizes.
-
-// Words consist of any sequence of non-space characters.
+// Letter Counter Part 2
+// Modify the wordSizes function from the previous exercise to exclude non-letters when determining word size. For instance, the word size of "it's" is 3, not 4.
 
 // Examples:
 
